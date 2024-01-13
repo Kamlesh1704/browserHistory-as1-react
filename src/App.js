@@ -130,16 +130,21 @@ class App extends Component {
             />
           </div>
         </div>
-        <div className="list">
-          {searchResults.map(eachUser => (
-            <List
-              listDetails={eachUser}
-              key={eachUser.id}
-              deletefunc={this.deletefunc}
-            />
-          ))}
-          {emptyHistory && <p className="">Empty History View</p>}
-        </div>
+      <div>
+        {HistoryList.length() === 0 ? (
+          <p>There is no history to show </p>
+        ) : (
+          <ul className="list">
+            {searchResults.map(eachUser => (
+              <List
+                listDetails={eachUser}
+                key={eachUser.id}
+                deletefunc={this.deletefunc}
+              />
+            ))}
+          </ul>
+        )}
+          </div>
       </div>
     )
   }
