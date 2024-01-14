@@ -8,19 +8,22 @@ const List = props => {
   }
   return (
     <li className="li">
-      <div className="">
-        <p className="">{timeAccessed}</p>
-        <img src={logoUrl} className="" alt="domain logo" />
-        <p className="">{title}</p>
-        <a href={domainUrl} className="">
-          {domainUrl}
-        </a>
+      <div className="text">
+        <p className="time">{timeAccessed}</p>
+        <img src={logoUrl} className="logo" alt="domain logo" />
+        <p className="title">{title}</p>
+        <p className="a">{domainUrl}</p>
       </div>
-      <button className="" data-testid="delete" onClick={deletelist}>
+      <button
+        className="button"
+        type="button"
+        data-testid="delete"
+        onClick={deletelist}
+      >
         <img
           src="https://assets.ccbp.in/frontend/react-js/delete-img.png"
           alt="delete"
-          className=""
+          className="icon"
         />
       </button>
     </li>
